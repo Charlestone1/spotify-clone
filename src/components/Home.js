@@ -72,14 +72,28 @@ const Home = () => {
     setArtists(data.artists.items);
   }
   
+  // const renderArtist = () => {
+  //   return artists.map(artist => (
+  //     <div key={artist.id}>
+  //       <h3>{artist.name}</h3>
+  //       <img src={artist.images[0].url} />
+  //       <p>{artist.followers.total}</p>
+  //       <p>{artist.popularity}</p>
+  //       <p>{artist.external_urls.spotify}</p>
+  //       <p>{artist.genres.join(", ")}</p>
+  //       <p>{artist.type}</p>
+  //       <p>{artist.uri}</p>
+  //     </div>
+  //   ))
+  // }
+
   return (
     <>
       {!token ? 
         <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login to Spotify</a> 
         : <button onClick={logout}>Logout</button> 
       }
-      {token ? 
-        
+      {token ?  
     <div className='home_container'>
       <main className='main_home_container'>
         <div className='main_content search_container'>
