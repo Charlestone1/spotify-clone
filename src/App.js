@@ -1,7 +1,7 @@
 // import { useEffect, useState } from 'react';
 import './App.css';
 import Main from './components/Main';
-import axios from 'axios';
+// import axios from 'axios';
 
 function App() {
   

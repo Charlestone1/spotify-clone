@@ -49,6 +49,7 @@ const Home = () => {
     setToken(token);
   }, []);
 
+  console.log(artists);
 
   const logout = () => {
     window.localStorage.removeItem("token");
