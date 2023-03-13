@@ -19,13 +19,9 @@ code {
 }
  /* main container styling begins */
  .main_container {
-  /* background-color: #E7E8F3; */
-  /* background-color: greenyellow; */
   height: 97vh;
   width: 97vw;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   border-radius: 15px;
   overflow:hidden;
  }
@@ -101,6 +97,35 @@ code {
 .sidebar_bottom{
   height: 4rem;
   border-top: 1px solid gray;
+}
+
+.favorit_cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+.image_and_name{
+  display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+.dots_icon{
+  color: black;
+    display: flex; 
+    align-items: center
+}
+.details_contain{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: flex-start;
+    padding-left: 0.5rem;
+}
+.details_contain h5{
+  margin: 0.1rem;
+  font-size: 0.75rem;
+  
 }
 /* END: Sidebar Styling */
 
@@ -497,5 +522,30 @@ background-color: #c5c5c9;
  }
 
 /* END: Aside Styling */
+/* BEGIN: Login Styling */
+.login_cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
 
+.login_cont h2{
+  color: green;
+  font-size: 2rem;
+}
 
+.login_cont a{
+  background-color: rgb(36, 173, 36);
+  border: none;
+  padding: 0.7rem 0.9rem;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* END: Login Styling */

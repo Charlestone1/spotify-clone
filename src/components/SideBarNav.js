@@ -42,7 +42,21 @@ const SideBarNav = () => {
                 <li className='menu_list'><a href="#"><span className='react_icon_house'><CiStar /></span>Albums</a></li>
             </ul>
         </nav>
-        <div className='sidebar_bottom'></div>
+        <div className='sidebar_bottom'>
+        <div className='favorit_cont'>
+        <div className='image_and_name'>
+            <div className='img_contain'>
+                <img src="../assets/image/drake.jpg" alt="artist"/>
+            </div>
+            <div className='details_contain'>
+                <h5>nameer</h5>
+            </div>
+        </div>
+        <div className='dots_icon'>
+
+        </div>
+      </div>
+        </div>
     </div>
   )
 }

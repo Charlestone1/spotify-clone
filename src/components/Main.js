@@ -1,14 +1,16 @@
 import React from 'react'
-import Home from './Home'
-import SideBarNav from './SideBarNav'
+// import Login from './Login'
+import Dashboard from './Dashboard'
+
+
+// const code = new URLSearchParams(window.location.search).get('code')
 
 const Main = () => {
   return (
     <div className='main_container'>
-        <SideBarNav />
-        <Home />
+        <Dashboard />
     </div>
   )
 }
 
-export default Main
+export default Main;

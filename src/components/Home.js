@@ -33,6 +33,7 @@ const Home = () => {
   const [token, setToken] = useState("");
   const [searchKey, setSearchKey] = useState("");
   const [artists, setArtists] = useState([]);
+  // const [songs, setSongs] = useState([]);
 
 
 
@@ -51,10 +52,10 @@ const Home = () => {
 
   console.log(artists);
 
-  const logout = () => {
-    window.localStorage.removeItem("token");
-    setToken("");
-  }
+  // const logout = () => {
+  //   window.localStorage.removeItem("token");
+  //   setToken("");
+  // }
   
 
   const searchArtist = async e => {
@@ -71,6 +72,7 @@ const Home = () => {
     });
     // console.log(data);
     setArtists(data.artists.items);
+    // setSongs(data.tracks.items);
   }
   
   // const renderArtist = () => {
@@ -89,13 +91,14 @@ const Home = () => {
   // }
 
   return (
+
     <>
       {!token ? 
+      <div className='login_cont'>
+        <h2>Hello! Welcome</h2>
         <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login to Spotify</a> 
-        : <button onClick={logout}>Logout</button> 
-      }
-      {token ?  
-    <div className='home_container'>
+    </div>
+      : <div className='home_container'>
       <main className='main_home_container'>
         <div className='main_content search_container'>
           <div className='searcher_arrows'>
@@ -182,7 +185,7 @@ const Home = () => {
           </div>
           <div className='play_progress'>
             <span className='playtime_elapsed'>0:43</span>
-            <span className='playtime_progress'>--------------------</span>
+            <span className='playtime_progress'></span>
             <span className='playtime_remaining'>2:59</span>
           </div>
         </div>
@@ -226,8 +229,9 @@ const Home = () => {
         </div>
       </aside>
     </div>
-        : <h2>Please Login</h2>
-      }
+       
+    }
+    
     </>
   )
 }

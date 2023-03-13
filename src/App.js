@@ -25,7 +25,7 @@ function App() {
   return (
    <div>
     
-    <h2>Spotify App</h2>
+    {/* <h2>Spotify App</h2> */}
       {/* {!token ? 
         <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login to Spotify</a> 
         : <button onClick={logout}>Logout</button> 
